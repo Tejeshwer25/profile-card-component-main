@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+
+:root {
+    --primary-dark-cyan: hsl(185, 75%, 39%);
+    --primary-very-dark-blue: hsl(229, 23%, 23%);
+    --primary-dark-grayish-blue: hsl(227, 10%, 46%);
+    --neutral-dark-gray: hsl(0, 0%, 59%);
+
+    --font-size: 18px;
+    --font-weight-bold: 700;
+    --font-weight-normal: 400;
+    --font-family: 'Kumbh Sans';
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden !important;
+    font-family: var(--font-family);
+    overflow: hidden;
+}
+
+.container {
+    height: 100vh;
+    background-color: var(--primary-dark-cyan)
+}
+
+/* SVG BAckground */
+.container::before {
+    content: '';
+    position: absolute;
+    background: url(./images/bg-pattern-top.svg);
+    width: 995px;
+    height: 945px;
+    transform: translate(-69%, -60%);
+    background-repeat: no-repeat;
+}
+
+.card {
+    z-index: 2;
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    margin: 50vh auto;
+    transform: translate(0%, -50%)
+}
+
+.card-head {
+    background-image: url('./images/bg-pattern-card.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 300px;
+    min-height: 150px;
+}
+
+.card > img {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 5px solid #fff;
+    padding: 0px;
+}
+
+.card-body {
+    margin: auto;
+    margin-top: -25px;
+    width: fit-content;
+    text-align: center;
+    padding: 1rem 0rem;
+}
+
+.card-body h2 {
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-very-dark-blue);
+}
+
+.card-body h2 span {
+    color: var(--primary-dark-grayish-blue);
+    font-weight: 100;
+}
+
+.card-body #state {
+    line-height: 3;
+}
+
+.card-footer {
+    border-top: 1px solid var(--neutral-dark-gray);
+    margin: 2rem 0rem 0rem 0rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0rem;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-footer h2 {
+    color: var(--primary-very-dark-blue);
+    font-size: 1.3rem;
+}
+
+.card-footer p{
+    color: var(--primary-dark-grayish-blue);
+    font-size: 1rem;
+    line-height: 2
+}
+
+
+@media(min-width: 800px) {
+    .card {
+        width: 50%;
+    }
+}
